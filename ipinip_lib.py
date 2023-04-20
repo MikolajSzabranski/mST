@@ -15,6 +15,7 @@ def encapsulate_packet(src_ip, dst_ip, payload):
     # Combine the outer IP header and the payload IP packet
     return ip_header + payload
 
+
 def decapsulate_packet(packet):
     # Extract the payload IP packet from the IP-in-IP packet
     ip_header_length = (packet[0] & 0x0F) * 4
@@ -31,10 +32,10 @@ def send_packet(src_ip, dst_ip, payload, port):
         sender.sendto(packet, (str(dst_ip), port))
 
 
-def receive_packet(port):
+def receive_packet(receiver_ip, receiver_port):
     # Receive the packet
     with socket.socket(socket.AF_INET, socket.SOCK_RAW, 4) as receiver:
-        receiver.bind(('', port))
+        receiver.bind((receiver_ip, receiver_port))
         packet, _ = receiver.recvfrom(65535)
 
     # Decapsulate the IP-in-IP packet

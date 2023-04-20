@@ -3,8 +3,8 @@ import ipinip_lib
 
 
 def main():
-    src_ip = IPv4Address('10.1.1.100')  # sender IP address
-    dst_ip = IPv4Address('10.1.1.200')  # receiver IP address
+    src_ip = IPv4Address('10.1.1.185')  # sender IP address
+    dst_ip = IPv4Address('10.1.1.184')  # receiver IP address
     port = 12345
     message = "sample text"
 
