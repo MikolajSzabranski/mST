@@ -6,7 +6,7 @@ def main():
     src_ip = IPv4Address('10.1.1.186')  # sender IP address
     fwd_ip = IPv4Address('127.0.0.14')  # forwarder IP address
     dst_ip = IPv4Address('127.0.0.13')  # receiver IP address
-    port = 12345
+    port = 9890
 
     print(f"IP-in-IP sender initialized at {src_ip}")
     print(f"Forwarding through {fwd_ip} to {dst_ip}")

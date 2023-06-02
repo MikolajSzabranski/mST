@@ -4,7 +4,7 @@ import ipinip_lib
 
 def main():
     ip = "127.0.0.13"
-    port = 12345
+    port = 9890
     print(f"Receiver listening at {ip}")
 
     while True:
