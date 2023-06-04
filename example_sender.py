@@ -3,7 +3,7 @@ import ipinip_lib
 
 
 def main():
-    src_ip = IPv4Address('10.1.1.186')  # sender IP address
+    src_ip = IPv4Address('127.0.0.1')  # sender IP address
     fwd_ip = IPv4Address('127.0.0.14')  # forwarder IP address
     dst_ip = IPv4Address('127.0.0.13')  # receiver IP address
     port = 9890
